@@ -1,0 +1,9 @@
+{
+  "name": "topl-test",
+  "description": "Module used to test Topl",
+  "version": "0.0.1",
+  "dependencies": {
+    "topl" : "0.0.1"
+  }
+}
+
