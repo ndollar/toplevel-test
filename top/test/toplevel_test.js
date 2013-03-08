@@ -1,11 +1,19 @@
 var assert = require('assert')
-  , assert = require('assert')
   , msg;
 
 describe('Toplevel', function() {
+  it('should throw an exception when passed invalid directory', function() {
+    assert.throws(function() {
+        require('toplevel')('/not/a/real/path');
+      },
+      Error,
+      msg
+    );
+  });
+
   it('should not throw an exception when being required', function() {
     assert.doesNotThrow(function() {
-        require('toplevel')(__dirname)
+        require('toplevel')(__dirname);
       },
       Error,
       msg
