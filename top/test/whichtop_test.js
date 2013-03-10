@@ -3,7 +3,7 @@ var assert = require('assert')
   , msg;
 
 var correctStdOut = function correctStdOut(stdout) {
-  return stdout.indexOf('toplevel-test') != -1;
+  return stdout.indexOf('/toplevel-test/') != -1;
 }
 
 var assertWhichTopWorks = function(done) {
