@@ -11,7 +11,7 @@ describe('Toplevel', function() {
     );
   });
 
-  it('should not throw an exception when being required', function() {
+  it('should not throw an exception when given a valid directory', function() {
     assert.doesNotThrow(function() {
         require('toplevel')(__dirname);
       },
@@ -19,6 +19,15 @@ describe('Toplevel', function() {
       msg
     );
   });
+  it('should not throw an exception when given a file path', function() {
+    assert.doesNotThrow(function() {
+        require('toplevel')(__filename);
+      },
+      Error,
+      msg
+    );
+  });
+ 
   it("should require the first module", function() {
     var first;
     var requireFromTop = require('toplevel')(__dirname)
